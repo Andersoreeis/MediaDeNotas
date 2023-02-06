@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./app.js" defer></script>
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+        .page{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            animation: show 2s infinite none;
+
+        }
+        @keyframes show {
+         from{
+            background: linear-gradient(to top, rgb(248, 248, 248), rgb(0, 102, 255)) ;
+            filter: drop-shadow(1px 1px 10px rgb(0, 0, 0));
+
+         }
+         to{
+            background: linear-gradient(to top, rgb(248, 248, 248), rgb(0, 102, 255)) ;
+            filter: drop-shadow(1px 1px 10px black);
+         }
+        }
+        .container{
+            width: 400px;
+            height: 600px;
+            border-radius: 10px;
+           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: show 2s infinite none;
+            filter: drop-shadow(1px 1px 10px green);
+       
+        }
+        .container > form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .container > form > input{
+            border-radius: 5px;
+            height: 40px;
+            width: 100%;
+            border: none;
+            color: black;
+            text-align: center;
+        }
+        .container > form > button{
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            color: rgba(0, 102, 255, 0.808);
+            transition: 0.5s;
+            border: 2px solid rgba(0, 102, 255, 0.808);
+           
+        }
+        .container > form > button:hover{
+            background: rgb(0, 102, 255);
+            color: white;
+        }
+        #border-green{
+            border: 1px solid green;
+        }
+        #situacao{
+            width: 100%;
+            height: 40px;
+            background-color: #fff;
+            text-align: center;
+            color: black;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border-radius: 5px; 
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="page">
+        
+        <div class="container">
+            
+            <form action="">
+                <h1>Notas</h1>
+                <label for="nota1"></label>
+                <input type="text"  id="nota1" placeholder="Digite a sua primeira nota">
+        
+                <label for="nota2"></label>
+                <input type="text"  id="nota2"  placeholder="Digite a sua segunda nota">
+
+                <label for="nota3"></label>
+                <input type="text"  id="nota3" placeholder="Digite a sua terceira nota">
+        
+                <label for="nota4"></label>
+                <input type="text"  id="nota4"  placeholder="Digite a sua quarta nota">
+    
+                <button id="btnMedia" type="button">Ver</button>
+               
+                <p id="situacao"></p>
+            </form>
+        </div>
+    </div>
+  
+   
+   
+</body>
+</html>
